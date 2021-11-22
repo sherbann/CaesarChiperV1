@@ -1,0 +1,13 @@
+body{
+  
+    background-color: royalblue;
+
+}
+
+#intro{
+    display:flexbox;
+    align-self: flex-end;
+    align-content:flex-start;
+    color:white;
+
+}
