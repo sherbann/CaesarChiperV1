@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--required meta-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--Bootstrap css-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!--Custom css-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div id="intro">
+    <p>
+    <h1>Caesar Cipher program</h1>
+    </p>
+    <p>Encoding:</p>
+    <ol>
+      <li>Select the values for your two keys, Key1 and Key2 (keep these values in mind for the decoding process later);
+      </li>
+      <li>Select the Encode button;</li>
+      <li>Input the text message that you want to encode. (using letters);</li>
+      <li>The encoded text message will be visible in the output field bellow;</li>
+      <li>On the output field, you can now find the encoded text, ready to use.</li>
+    </ol>
+    <p>Decoding:</p>
+    <ol>
+      <li>Select the values for your two keys that you used to encode your message;</li>
+      <li>Select the Decode button;</li>
+      <li>Type or paste in the encoded text message;</li>
+      <li>On the output field, you can now find the original text message.</li>
+    </ol>
+
+  </div>
+
+  <form name="caesarForm" id="caesarForm">
+    <label for="userMessage">Enter Message to be coded or decoded:</label><br />
+    <textarea id="userMessage" rows="4" cols="50" oninput="enDeCode()">
+      </textarea>
+    <br /> <br />
+    <label for="encode">Encode:</label>
+    <input type="radio" name="code" id="encode" checked onchange="enDeCode()" />
+    <label for="decode">Decode:</label>
+    <input type="radio" name="code" id="decode" checked onchange="DeCode()" />
+    <br /> <br />
+    <label for="userKey1">Key1:</label>
+    <input type="number" min="0" max="26" id="userKey1" value="1" onchange="enDeCode()" />
+    <label for="userKey2">Key2:</label>
+    <input type="number" min="0" max="26" id="userKey2" value="1" onchange="enDeCode()" />
+    <br /> <br />
+    <label for="Output">Output:</label><br />
+    <textarea id="Output" rows="4" cols="50" oninput="DeCode()">
+      </textarea>
+
+  </form>
+  <script src="caesarCipher.js"></script>
+</body>
+
+</html>
